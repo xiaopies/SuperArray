@@ -7,18 +7,27 @@ public class SuperArray{
     this.size = size;
   }
   public SuperArray(){
-    SuperArray superArray = new SuperArray(10);
+    SuperArray data = new String[10] data;
   }
 
   public int size(){
-    return superArray.length;
+    return data.length;
   }
   public boolean add(String element){
-    superArray+= element;
+    data += element;
   }
   public String get(int index){
-    superArray.indexOf(index);
+    return data(index);
   }
+  public String set(int index, String element){
+    int a = get[index];
+    String y = data[a];
+    data[index] = element;
+    return y;
+
+  }
+
+
 
 
 }
