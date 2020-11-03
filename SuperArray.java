@@ -13,7 +13,12 @@ public class SuperArray{
   public int size(){
     return superArray.length;
   }
-  
+  public boolean add(String element){
+    superArray+= element;
+  }
+  public String get(int index){
+    superArray.indexOf(index);
+  }
 
 
 }
