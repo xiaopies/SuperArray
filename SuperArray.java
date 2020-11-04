@@ -2,29 +2,33 @@ public class SuperArray{
   private String[] data;
   private int size;
 
-  public SuperArray( int size){
-    this.data = data;
-    this.size = size;
+  public SuperArray(int size){
+    data = new String[10];
+    size = 0;
   }
   public SuperArray(){
-    SuperArray data = new String[10] data;
+    data = new String[10] ;
   }
-
   public int size(){
-    return data.length;
+    return size;
   }
   public boolean add(String element){
-    data += element;
+    if (data.length <= size){
+      return false;
+    }
+    else{
+      data[size]= element;
+      size ++;
+    }
+    return true;
   }
   public String get(int index){
-    return data(index);
+    return data[index];
   }
   public String set(int index, String element){
-    int a = get[index];
-    String y = data[a];
+    String a = get(index);
     data[index] = element;
-    return y;
-
+    return a;
   }
 
 
