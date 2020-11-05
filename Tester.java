@@ -19,8 +19,8 @@ public class Tester{
     for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
-    words.clear();
-    System.out.println(words.isEmpty());
+
+    System.out.println(words.toString());
 
 
   }
