@@ -54,17 +54,20 @@ public class SuperArray{
       return "[]";
     }
     String x= "[";
-    for (int i = 0; i<size; i++){
+    int i = 0;
+    while (i<size){
       if (data[i] != null){
         x+= data[i];
         if (i< size -1){
           x += ", ";
         }
+        i++;
       }
     }
     x += "]";
     return x;
   }
+
 
 
 
