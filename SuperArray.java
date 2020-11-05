@@ -69,8 +69,10 @@ public class SuperArray{
   }
   public boolean contains(String s){
     for (int i = 0; i<data.length; i++){
-      if (data[i] == s){
-        return true;
+      if (data[i] != null){
+        if (data[i].equals(s)){
+          return true;
+        }
       }
     }
     return false;
@@ -89,19 +91,23 @@ public class SuperArray{
     size++;
   }
   public String remove(int index){
+
     String a = data[index];
-    for (int i = index; i < data.length-1; i++){
-      if (data[i+1] != null){
-        data[i] = data[i+1];
-      }
+    for (int i = index; i < size-1; i++){
+      data[i] = data[i+1];
     }
     size --;
     return a;
   }
+
+
+
   public int indexOf(String s){
     for (int i = 0; i<data.length; i++){
-      if (data[i] == s){
-        return i;
+      if (data[i] != null){
+        if (data[i].equals(s)){
+          return i;
+        }
       }
     }
     return -1;
