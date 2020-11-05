@@ -2,12 +2,9 @@ public class SuperArray{
   private String[] data;
   private int size;
 
-  public SuperArray(int size){
+  public SuperArray(){
     data = new String[10];
     size = 0;
-  }
-  public SuperArray(){
-    data = new String[10] ;
   }
   public int size(){
     return size;
@@ -87,6 +84,20 @@ public class SuperArray{
     }
     data[index] = element;
     size++;
+  }
+  public SuperArray(int initialCapacity){
+    data = new String[initialCapacity];
+    size = 0;
+  }
+  public String remove(int index){
+    String a = data[index];
+    for (int i = index; i < data.length-1; i++){
+      if (data[i+1] != null){
+        data[i] = data[i+1];
+      }
+    }
+    size --;
+    return a;
   }
 
 
