@@ -19,10 +19,14 @@ public class Tester{
     for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
+    System.out.println(words.toString());
 
     System.out.println(words.toString());
     System.out.println(words.contains("uni"));
     System.out.println(words.contains("unit"));
+    words.add(3, "Xiaoshen");
+    System.out.println(words.toString());
+
 
 
   }
