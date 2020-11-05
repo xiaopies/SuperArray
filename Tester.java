@@ -25,8 +25,10 @@ public class Tester{
     System.out.println(words.contains("unit"));
     words.add(3, "Xiaoshen");
     System.out.println(words.toString());
+    System.out.println(words.indexOf("Xiaoshen"));
     words.remove(3);
     System.out.println(words.toString());
+    System.out.println(words.indexOf("Xiaoshen"));
 
 
 
