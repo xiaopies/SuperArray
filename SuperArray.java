@@ -36,6 +36,11 @@ public class SuperArray{
     }
     data = a;
   }
+  public void clear(){
+    String[] a = new String[data.length];
+    data = a;
+  }
+  
 
 
 
