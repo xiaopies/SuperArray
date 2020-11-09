@@ -112,7 +112,14 @@ public class SuperArray{
     }
     return a;
   }
-  
+  public int lastIndexOf(String value){
+    for (int i = size; i >=0; i--){
+      if ((get(i) != null) && (get(i).equals(value))){
+        return i;
+      }
+    }
+    return -1;
+  }
 
 
 }
