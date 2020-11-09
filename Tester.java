@@ -44,8 +44,13 @@ public class Tester{
     System.out.println(rds.toString());
     System.out.println(ords.equals(rds));
 
-    SuperArray tea = new SuperArray(-2);
-    System.out.println(tea);
+    try{
+      SuperArray tea = new SuperArray(-2);
+    }
+    catch( IllegalArgumentException e ){
+      System.out.println("don't use negative");
+    }
+
 
 
 
