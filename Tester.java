@@ -51,6 +51,8 @@ public class Tester{
       System.out.println("don't use negative");
     }
 
+    System.out.println(ords.get(14));
+
 
 
 
