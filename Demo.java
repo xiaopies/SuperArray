@@ -11,6 +11,18 @@ public class Demo{
       }
     }
   }
+  public static SuperArray findOverlap(SuperArray a, SuperArray b){
+    SuperArray x = new SuperArray();
+    for (int i = 0; i<a.size(); i++){
+      for (int j =0; j< b.size(); j++){
+        if (a.get(i).equals(b.get(j))) {
+          x.add(a.get(i));
+        }
+      }
+    }
+    removeDuplicates(x);
+    return x;
+  }
   public static void main(String[]args){
     SuperArray words = new SuperArray();
     //grouped to save vertical space
@@ -20,5 +32,17 @@ public class Demo{
 
     System.out.println(words);
     removeDuplicates(words);
-    System.out.println(words);  }
+    System.out.println(words);
+
+    SuperArray ords = new SuperArray();
+    ords.add("kani");   ords.add("uni");     ords.add("ebi");     ords.add("una");
+    ords.add("una");    ords.add("ebi");     ords.add("kani");    ords.add("una");
+    ords.add("una");    ords.add("ebi");     ords.add("toro");
+    SuperArray rds = new SuperArray();
+    rds.add("kani");   rds.add("uni");     rds.add("ebi");     rds.add("una");
+    rds.add("una");    rds.add("ebi");     rds.add("kani");    rds.add("una");
+    rds.add("una");    rds.add("ebi");     
+    System.out.println(findOverlap(ords, rds));
+
+  }
 }
