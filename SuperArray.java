@@ -120,6 +120,9 @@ public class SuperArray{
     }
     return -1;
   }
+  public boolean equals(SuperArray other){
+    return (toString().equals(other.toString()) );
+  }
 
 
 }
