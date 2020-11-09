@@ -43,6 +43,7 @@ public class Tester{
     rds.add("toro");
     System.out.println(rds.toString());
     System.out.println(ords.equals(rds));
+    
 
 
 

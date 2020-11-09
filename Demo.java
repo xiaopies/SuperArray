@@ -23,6 +23,19 @@ public class Demo{
     removeDuplicates(x);
     return x;
   }
+  public static SuperArray zip(SuperArray a, SuperArray b){
+    SuperArray nice = new SuperArray();
+    for(int i = 0; i< a.size(); i++){
+      nice.add(a.get(i));
+      if (i<b.size()){
+        nice.add(b.get(i));
+      }
+    }
+    for (int i = a.size(); i<b.size(); i++){
+      nice.add(b.get(i));
+    }
+    return nice;
+  }
   public static void main(String[]args){
     SuperArray words = new SuperArray();
     //grouped to save vertical space
@@ -41,8 +54,13 @@ public class Demo{
     SuperArray rds = new SuperArray();
     rds.add("kani");   rds.add("uni");     rds.add("ebi");     rds.add("una");
     rds.add("una");    rds.add("ebi");     rds.add("kani");    rds.add("una");
-    rds.add("una");    rds.add("ebi");     
+    rds.add("una");    rds.add("ebi");
+    SuperArray hello = new SuperArray();
+    hello.add("hi");   hello.add("hola");     hello.add("nihao");     hello.add("bonjour");
+    hello.add("añong");    hello.add("ohayo");     hello.add("aloha");
     System.out.println(findOverlap(ords, rds));
+    System.out.println(hello);
+    System.out.println(zip(hello, words));
 
   }
 }
