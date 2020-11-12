@@ -51,7 +51,19 @@ public class Tester{
       System.out.println("don't use negative");
     }
 
-    System.out.println(ords.get(14));
+    try{
+      ords.get(14);
+    }
+    catch( IndexOutOfBoundsException e ){
+      System.out.println("must be between 0 and " + ords.size() );
+    }
+    try{
+      ords.set(14, "hohoho");
+    }
+    catch( IndexOutOfBoundsException e ){
+      System.out.println("must be between 0 and " + ords.size() );
+    }
+
 
 
 
