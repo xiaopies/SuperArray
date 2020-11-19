@@ -48,6 +48,7 @@ public class SuperArray{
   public void clear(){
     String[] a = new String[data.length];
     data = a;
+    size = 0;
   }
   public boolean isEmpty(){
     for (int i = 0; i < data.length; i++){
@@ -81,7 +82,7 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
-    if (index<0 || index>= size()){
+    if (index<0 || index> size()){
       throw new IndexOutOfBoundsException("index " + index + " is out of range");
     }
     if (data[data.length-1] != null){
